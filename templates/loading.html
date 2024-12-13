@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Animation</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f9f3e8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .loading-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: #f9f3e8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            flex-direction: column;
+        }
+
+        .loading-container img {
+            width: 150px;
+            height: auto;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .loading-container img:hover {
+            transform: scale(1.1);
+            opacity: 0.8;
+        }
+
+        .loading-container h1 {
+            margin-top: 20px;
+            font-family: 'Arial', sans-serif;
+            font-size: 24px;
+            color: #663300;
+        }
+
+        .flower {
+            position: absolute;
+            top: -100px;
+            opacity: 0.8;
+            animation: fall 3s ease-in-out infinite;
+        }
+
+        .flower:nth-child(1) {
+            animation-delay: 0s;
+            left: 10%;
+        }
+
+        .flower:nth-child(2) {
+            animation-delay: 0.5s;
+            left: 30%;
+        }
+
+        .flower:nth-child(3) {
+            animation-delay: 1s;
+            left: 50%;
+        }
+
+        .flower:nth-child(4) {
+            animation-delay: 1.5s;
+            left: 70%;
+        }
+
+        .flower:nth-child(5) {
+            animation-delay: 2s;
+            left: 90%;
+        }
+
+        @keyframes fall {
+            0% {
+                top: -100px;
+                opacity: 0.8;
+            }
+            50% {
+                top: 50vh;
+                opacity: 1;
+            }
+            100% {
+                top: 100vh;
+                opacity: 0.8;
+            }
+        }
+
+        .main-content {
+            display: none;
+            width: 80%;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: white;
+            text-align: center;
+        }
+
+        .grid-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Each item takes one full row */
+    gap: 30px; /* Space between rows */
+    padding: 20px;
+    justify-items: center;
+}
+
+        .grid-item {
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .grid-item:hover {
+            transform: translateY(-10px); /* Slight lift on hover */
+        }
+
+        .grid-item img {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit; /* Prevent link color override */
+        }
+    </style>
+</head>
+<body>
+    <div class="loading-container" id="loading">
+        <!-- Multiple flowers animated from above -->
+        <img src="static/pink-flower-white-background.png" alt="Flower" class="flower">
+        <img src="static/pink-flower-white-background.png" alt="Flower" class="flower">
+        <img src="static/pink-flower-white-background.png" alt="Flower" class="flower">
+        <img src="static/pink-flower-white-background.png" alt="Flower" class="flower">
+        <img src="static/pink-flower-white-background.png" alt="Flower" class="flower">
+        <img src="static/dutta.jfif" alt="Gurudev Dutta">
+        <h1>।। श्री गुरुदेव दत्त ।।</h1>
+    </div>
+
+    <div class="main-content" id="main-content">
+        <header>
+            <h1>॥ दिगंबरा दिगंबरा श्रीपाद वल्लभ दिगंबरा ॥</h1>
+        </header>
+        <h2 style="text-align: center; margin: 20px 0; color: #663300;">Temple of Dattatray</h2> <!-- Added Title -->
+        <div class="grid-container">
+            <!-- Container 1 (Link Added) -->
+            <a href="/home">
+                <div class="grid-item">
+                    <img src="static/Gurucharitra.jpg" alt="Image 1">
+                    <h2>गुरुचरित्र</h2>
+                    <p>अध्याय</p>
+                </div>
+            </a>
+            <!-- Container 2 (Link Added) -->
+            <a href="#">
+                <div class="grid-item">
+                    <img src="static/navnath.jfif" alt="Image 2">
+                    <h2>श्री नवनाथ भक्तिसार </h2>
+                </div>
+            </a>
+            <!-- Container 3 (Link Added) -->
+            <a href="#">
+                <div class="grid-item">
+                    <img src="static/sanshipta.jpg" alt="Image 3">
+                    <h2>संक्षिप्त गुरुचरित्र</h2>
+                </div>
+            </a>
+            <!-- Container 4 (Location Maps) -->
+            <a href="https://g.co/kgs/t3Y5Mz7">
+                <div class="grid-item">
+                    <img src="static/gangapur.jpg" alt="Map 1">
+                    <h2>श्रीक्षेत्र गाणगापूर </h2>
+                    <p>स्थान: सोलापूर- गुलबर्गा स्टेशनमध्ये गाणगापुर रोड रेल्वे स्टेशन. तेथून २० कि. मी. आहे. भीमा -अमरजा संगमकाठी. 
+                    </p>
+                    <p>
+                        विशेष: जागृत स्थान, अनेक भक्तांचे व्याधी निरसन, बाधा निरसन, प्रत्यक्ष दत्त दर्शन, श्रीगुरुंची अनुष्ठान व लीला भूमी.   
+                    </p>
+                </div>
+            </a>
+            <a href="https://g.co/kgs/3DpGTFt">
+                <div class="grid-item">
+                    <img src="static/narsivwadi.jfif" alt="Map 2">
+                    <h2>श्रीक्षेत्र नृसिंहवाडी</h2>
+                    <p>तहसील शिरोळ, जि. कोल्हापूर, मिरजे पासून जवळ, कृष्णा - पंचगंगा संगम स्थळी.    </p>
+                    <p>विशेष: मनोहर पादुका. श्री दत्तमहाराजांची राजधानी.</p>
+                </div>
+            </a>
+            <a href="https://g.co/kgs/focYsxm">
+                <div class="grid-item">
+                    <img src="static/pithapur.png" alt="Map 3">
+                    <h2>पीठापूर</h2>
+                    <p>इस्ट गोदावरी जिल्हा, आंध्रप्रदेश </p>
+                    <p>विशेष: श्रीपाद श्रीवल्लभ जन्मस्थान, कुकुटेश्वर मंदिर, अनघा लक्ष्मी मंदिर, सत्यनारायण मंदिर</p>
+                </div>
+            </a>
+        </div>
+    </div>
+    
+    <script>
+        window.addEventListener('load', function() {
+            const loading = document.getElementById('loading');
+            const mainContent = document.getElementById('main-content');
+
+            setTimeout(function() {
+                loading.style.display = 'none';
+                mainContent.style.display = 'block';
+            }, 3000); // 3 seconds delay for loading animation
+        });
+    </script>
+</body>
+</html>

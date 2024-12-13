@@ -1,0 +1,111 @@
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f9f3e8;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background-color: #ffcc66;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    color: #663300;
+    font-size: 2rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #663300;
+    font-weight: bold;
+}
+
+.intro {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.intro img {
+    max-width: 300px;
+    border-radius: 15px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.adhyay {
+    margin: 20px auto;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: slideIn 1.5s ease-in-out;
+    max-width: 600px;
+}
+
+.adhyay h2 {
+    color: #cc6600;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #ffcc00;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    animation: buttonPulse 1.5s infinite;
+}
+
+.button:hover {
+    background-color: #ffaa00;
+}
+
+@keyframes buttonPulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
